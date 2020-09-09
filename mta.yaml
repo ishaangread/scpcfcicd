@@ -1,0 +1,18 @@
+ID: cfdevops
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: nodeService
+   type: nodejs
+   path: nodeService
+   provides:
+    - name: nodeService_api
+      properties:
+         url: ${default-url}
+   parameters:
+      memory: 512MB
+   parameters-metadata:  
+      memory:  
+        optional: true  
+        overwritable: true       
